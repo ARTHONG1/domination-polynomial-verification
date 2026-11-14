@@ -1,0 +1,40 @@
+[["FinalVerificationP24Overlap.triple_supersets_card",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24Overlap.allowed_triples_bound",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24Overlap.distinct_pair_triple_inter_le_one",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24Overlap.union_lower_from_pairwise_intersections",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24Overlap.tripleSupersets",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

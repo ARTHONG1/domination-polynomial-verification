@@ -1,0 +1,258 @@
+{
+  "source_sha256": "47d7d901af2903d30f48b6a0a084341c4d0ee7ea27cdcfbad505f8e160dcb375",
+  "checks": [
+    {
+      "claim": "K_h and (ii) bound for h=3,4,5",
+      "main_tex_lines": [
+        109,
+        120,
+        121
+      ],
+      "source": {
+        "109": "$K_h=\\lceil (h+1)^2/4\\rceil$.",
+        "120": "$\\Gamma(F)-\\gamma(F)\\le\\sqrt{2n/3}-1$. The bound in part~(ii) equals $5$ for",
+        "121": "$h=3$, $22$ for $h=4$ and $33$ for $h=5$. The case $h=3$ of"
+      },
+      "result": {
+        "K0..5": [
+          1,
+          1,
+          3,
+          4,
+          7,
+          9
+        ],
+        "n_bound_3_4_5": [
+          5,
+          22,
+          33
+        ]
+      },
+      "justification": "ceil via (q+3)//4, then 6K_h-h-16",
+      "status": "checked"
+    },
+    {
+      "claim": "gap-four finite bounds",
+      "main_tex_lines": [
+        124,
+        644,
+        645,
+        646
+      ],
+      "source": {
+        "124": "forests with at most $22$ vertices, and here we rely on a computation which",
+        "644": "then $F$ would have at most $6K_4-4-16=22$ vertices by",
+        "645": "Theorem~\\ref{thm:criterion-intro}(ii), contradicting",
+        "646": "Corollary~\\ref{cor:smallforest}."
+      },
+      "result": {
+        "n_upper": 22,
+        "n_minus_gamma_upper": 13
+      },
+      "justification": "exact integer arithmetic",
+      "status": "checked"
+    },
+    {
+      "claim": "bound using K_h <= ((h+1)^2+3)/4",
+      "main_tex_lines": [
+        551,
+        552
+      ],
+      "source": {
+        "551": "(iii) Since $K_h\\le\\bigl((h+1)^2+3\\bigr)/4$, we have",
+        "552": "$6K_h-h-16\\le(3h^2+4h-20)/2$. If $2n\\ge3h^2+4h-19$, then $n>6K_h-h-16$, and"
+      },
+      "result": {
+        "checked_h": "0..10000",
+        "symbolic": "4K <= (h+1)^2+3 implies 2(6K-h-16) <= 3h^2+4h-20"
+      },
+      "justification": "ceil inequality from integer division; algebraic implication",
+      "status": "checked"
+    },
+    {
+      "claim": "sqrt sufficient condition for (iii)",
+      "main_tex_lines": [
+        119,
+        120
+      ],
+      "source": {
+        "119": "Part~(iii) applies, for instance, whenever",
+        "120": "$\\Gamma(F)-\\gamma(F)\\le\\sqrt{2n/3}-1$. The bound in part~(ii) equals $5$ for"
+      },
+      "result": "3h²+4h−19 = 3(h+1)²−(2h+22) <= 2n if (h+1)²<=2n/3",
+      "justification": "h>=0 makes 2h+22 positive",
+      "status": "checked"
+    },
+    {
+      "claim": "gap five n-gamma <=19",
+      "main_tex_lines": [
+        751,
+        752
+      ],
+      "source": {
+        "751": "For $h=5$, Theorem~\\ref{thm:criterion-intro} leaves the forests without",
+        "752": "isolated vertices that have at most $33$ vertices and satisfy"
+      },
+      "result": {
+        "K5": 9,
+        "nonunimodal_n_minus_gamma_max": 19
+      },
+      "justification": "contrapositive of Theorem 1.2(i), arithmetic portion only",
+      "status": "checked"
+    },
+    {
+      "claim": "T_k order 9k+4 from k>=4",
+      "main_tex_lines": [
+        141,
+        142
+      ],
+      "source": {
+        "141": "Schoonhoven~\\cite{BS} have $9k+4$ vertices and were shown there to be",
+        "142": "non-log-concave for $k\\ge4$, that is, from order $40$ on. Further trees and"
+      },
+      "result": {
+        "first_order": 40
+      },
+      "justification": "substitute k=4 and monotonicity in k",
+      "status": "checked"
+    },
+    {
+      "claim": "T(2,2,3), U vertex counts",
+      "main_tex_lines": [
+        665,
+        666,
+        670
+      ],
+      "source": {
+        "665": "$v_i$ exactly $k_i$ pendant paths on three vertices, each joined to $v_i$ by",
+        "666": "one of its end vertices. This tree has $1+r+3\\sum_i k_i$ vertices, and the",
+        "670": "Figure~\\ref{fig:U}."
+      },
+      "result": {
+        "base": 25,
+        "U": 27
+      },
+      "justification": "1+r+3sum(k_i), then append a path of 2 vertices",
+      "status": "checked"
+    },
+    {
+      "claim": "two giant tree orders and second gamma formula",
+      "main_tex_lines": [
+        866,
+        867,
+        868,
+        869,
+        870
+      ],
+      "source": {
+        "866": "avoid $v_0$ are minimal. Explicitly, the tree obtained from $T(8,8,9)$ by",
+        "867": "attaching $3211$ pendant paths on two vertices to $v_0$ has $6501$ vertices",
+        "868": "and satisfies $c_{\\gamma+2}-c_{\\gamma+1}>2$, and for $r=3$, $k=9$ and",
+        "869": "$M=7700$ the tree $W$ has $15\\,485$ vertices and",
+        "870": "$c_{\\gamma+2}-c_{\\gamma+1}>2.15$. For both trees the complete domination"
+      },
+      "result": {
+        "T889_M3211": 6501,
+        "W_r3_k9_M7700": 15485,
+        "gamma_W": 7728
+      },
+      "justification": "n=1+r+3sum(k_i)+2M, gamma=1+rk+M; gamma equality depends on P22 proof",
+      "status": "checked"
+    },
+    {
+      "claim": "C4 critical-vertex counterexample to forest lower bound",
+      "main_tex_lines": [
+        332,
+        333,
+        334
+      ],
+      "source": {
+        "332": "The lower bound of Lemma~\\ref{lem:lower} does not extend to bipartite",
+        "333": "graphs: in the cycle $C_4$ a set $S$ of three vertices has $a(S)=0$, while",
+        "334": "$2\\gamma(C_4)-|S|=1$. The upper bound, in contrast, holds for every bipartite"
+      },
+      "result": {
+        "gamma": 2,
+        "triple_count": 4,
+        "a_of_each_triple": 0,
+        "2gamma_minus_3": 1
+      },
+      "justification": "independent exhaustive subset and neighbor enumeration",
+      "status": "checked"
+    },
+    {
+      "claim": "K1,4 domination polynomial",
+      "main_tex_lines": [
+        568,
+        569,
+        570
+      ],
+      "source": {
+        "568": "contains the centre or consists of the four leaves, so",
+        "569": "\\begingroup\\small\\[",
+        "570": "D(K_{1,4},x)=x(1+x)^4+x^4=x+4x^2+6x^3+5x^4+x^5 ,"
+      },
+      "result": [
+        0,
+        1,
+        4,
+        6,
+        5,
+        1
+      ],
+      "justification": "sets containing centre: x(1+x)^4; only extra dominating set: four leaves",
+      "status": "checked"
+    },
+    {
+      "claim": "avd threshold comparison",
+      "main_tex_lines": [
+        420,
+        421,
+        422
+      ],
+      "source": {
+        "420": "For bipartite graphs, part~(ii) improves on the threshold of order",
+        "421": "$(n+\\Gamma(G))/2$ that holds for all graphs~\\cite{BO}, since",
+        "422": "$(n+2\\Gamma(G))/3\\le(n+\\Gamma(G))/2$."
+      },
+      "result": "(n+2Γ)/3 <= (n+Γ)/2 iff Γ<=n",
+      "justification": "cross-multiply by 6; every independent set has at most n vertices",
+      "status": "checked"
+    },
+    {
+      "claim": "table totals source cross-check",
+      "main_tex_lines": [
+        133,
+        650,
+        1002,
+        1003
+      ],
+      "source": {
+        "133": "\\item[\\textup{(ii)}] Among the $751\\,065\\,460$ trees with $\\MinNonLC$ vertices",
+        "650": "The proof for gap four uses Theorem~\\ref{thm:small} only for trees with at",
+        "1002": "Table~\\ref{tab:counts} lists the numbers of trees. Together with the tree on",
+        "1003": "one vertex, whose domination polynomial is $x$, these are the $\\TotalTreesAll$"
+      },
+      "result": {
+        "table_audit": {
+          "table_rows": 26,
+          "numbers": 52,
+          "errors": 0,
+          "total": {
+            "16": 32508,
+            "22": 9114285,
+            "26": 447672596,
+            "27": 1198738056
+          },
+          "t27": 751065460,
+          "r27": 16083734329,
+          "failures": []
+        }
+      },
+      "justification": "the output of table_counts.py is cited here, not recomputed in this script",
+      "status": "checked"
+    }
+  ],
+  "verified_claim_groups": 12,
+  "scope": "arithmetic and finite claims"
+}

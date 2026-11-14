@@ -1,0 +1,21 @@
+import domination_gap3.GapFourFiniteReductionCandidate
+import domination_gap3.ForestGapThreeAllNoIsolatesCandidate
+import domination_gap3.GapFourForestLargeCandidate
+import domination_gap3.GraphUniformGapCandidate
+import domination_gap3.BipartiteCriticalIndependentCandidate
+import domination_gap3.FiniteUniformVarianceCandidate
+
+/-! Prints the statements and the axioms of the theorems quoted in Appendix B of the paper. -/
+
+#check @GapThreeForestConflictCount.forest_critical_inequality
+#print axioms GapThreeForestConflictCount.forest_critical_inequality
+#check @BipartiteCriticalIndependentAudit.bipartite_critical_le_two_independence
+#print axioms BipartiteCriticalIndependentAudit.bipartite_critical_le_two_independence
+#check @GraphUniformGapAudit.graph_uniform_gap_unimodal
+#print axioms GraphUniformGapAudit.graph_uniform_gap_unimodal
+#check @ForestGapThreeAllNoIsolatesAudit.forest_gap_three_unimodal_no_isolates
+#print axioms ForestGapThreeAllNoIsolatesAudit.forest_gap_three_unimodal_no_isolates
+#check @GapFourForestLargeAudit.forest_gap_four_large_unimodal
+#print axioms GapFourForestLargeAudit.forest_gap_four_large_unimodal
+#check @GapFourFiniteReductionAudit.no_isolates_gap_four_large_or_at_most_twenty_two
+#print axioms GapFourFiniteReductionAudit.no_isolates_gap_four_large_or_at_most_twenty_two

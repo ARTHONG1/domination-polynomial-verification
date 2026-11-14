@@ -1,0 +1,32 @@
+[["LogConcaveProduct.PolynomialTuran",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["LogConcaveProduct.PolynomialGapless",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["LogConcaveProduct.polynomial_logconcave_gapless_unimodal",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["LogConcaveProduct.polynomial_real_mul_nonnegative_logconcave_gapless",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

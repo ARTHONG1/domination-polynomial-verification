@@ -1,0 +1,8 @@
+[["FinalVerificationJumpBound.forest_critical_jump_strict_upper_bound",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

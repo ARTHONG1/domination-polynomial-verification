@@ -1,0 +1,116 @@
+{
+ "trees_of_order_2_to_22": 9114284,
+ "gap4_forests_with_n_minus_gamma_le_13": 1290927,
+ "gap4_forests_by_order": {
+  "6": 1,
+  "8": 8,
+  "9": 2,
+  "10": 47,
+  "11": 36,
+  "12": 259,
+  "13": 350,
+  "14": 1357,
+  "15": 2635,
+  "16": 7126,
+  "17": 16755,
+  "18": 37535,
+  "19": 95264,
+  "20": 196287,
+  "21": 477328,
+  "22": 455937
+ },
+ "beaton_schoonhoven_trees": [
+  {
+   "k": 1,
+   "order": 13,
+   "gamma": 4,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 15,
+   "logconcave": true,
+   "failing_indices": [],
+   "unimodal": true
+  },
+  {
+   "k": 2,
+   "order": 22,
+   "gamma": 7,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 30,
+   "logconcave": true,
+   "failing_indices": [],
+   "unimodal": true
+  },
+  {
+   "k": 3,
+   "order": 31,
+   "gamma": 10,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 51,
+   "logconcave": false,
+   "failing_indices": [
+    11
+   ],
+   "unimodal": true
+  },
+  {
+   "k": 4,
+   "order": 40,
+   "gamma": 13,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 84,
+   "logconcave": false,
+   "failing_indices": [
+    14
+   ],
+   "unimodal": true
+  },
+  {
+   "k": 5,
+   "order": 49,
+   "gamma": 16,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 141,
+   "logconcave": false,
+   "failing_indices": [
+    17
+   ],
+   "unimodal": true
+  },
+  {
+   "k": 6,
+   "order": 58,
+   "gamma": 19,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 246,
+   "logconcave": false,
+   "failing_indices": [
+    20
+   ],
+   "unimodal": true
+  },
+  {
+   "k": 7,
+   "order": 67,
+   "gamma": 22,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 447,
+   "logconcave": false,
+   "failing_indices": [
+    23
+   ],
+   "unimodal": true
+  },
+  {
+   "k": 8,
+   "order": 76,
+   "gamma": 25,
+   "d_gamma": 1,
+   "d_gamma_plus_1": 840,
+   "logconcave": false,
+   "failing_indices": [
+    26
+   ],
+   "unimodal": true
+  }
+ ]
+}

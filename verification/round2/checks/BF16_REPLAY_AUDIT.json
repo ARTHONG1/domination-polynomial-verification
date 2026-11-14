@@ -1,0 +1,120 @@
+{
+  "status": "pass",
+  "submitted_pdf_sha256": "4df950b679a7c906e53721b9fc551e482042dfa824a30aa5d6014f68dfa99c63",
+  "replay_source": "computation/results (outputs shipped with the submitted supplement)",
+  "range": "n=2..16 (the submitted runner excludes K1)",
+  "orders": [
+    {
+      "n": 2,
+      "trees": 1,
+      "exhaustively_checked": 1,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 3,
+      "trees": 1,
+      "exhaustively_checked": 1,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 4,
+      "trees": 2,
+      "exhaustively_checked": 2,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 5,
+      "trees": 3,
+      "exhaustively_checked": 3,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 6,
+      "trees": 6,
+      "exhaustively_checked": 6,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 7,
+      "trees": 11,
+      "exhaustively_checked": 11,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 8,
+      "trees": 23,
+      "exhaustively_checked": 23,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 9,
+      "trees": 47,
+      "exhaustively_checked": 47,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 10,
+      "trees": 106,
+      "exhaustively_checked": 106,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 11,
+      "trees": 235,
+      "exhaustively_checked": 235,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 12,
+      "trees": 551,
+      "exhaustively_checked": 551,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 13,
+      "trees": 1301,
+      "exhaustively_checked": 1301,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 14,
+      "trees": 3159,
+      "exhaustively_checked": 3159,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 15,
+      "trees": 7741,
+      "exhaustively_checked": 7741,
+      "discrepancies": 0,
+      "critical_violations": 0
+    },
+    {
+      "n": 16,
+      "trees": 19320,
+      "exhaustively_checked": 19320,
+      "discrepancies": 0,
+      "critical_violations": 0
+    }
+  ],
+  "totals": {
+    "trees": 32507,
+    "exhaustively_checked": 32507
+  },
+  "K1_excluded_from_32507": true,
+  "n1_to16_if_K1_included": 32508,
+  "scope_limit": "Checks saved Program I/II replay records and their equality. Independent C++ code review and full mathematical meaning audit remain separate."
+}

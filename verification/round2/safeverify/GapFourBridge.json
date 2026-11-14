@@ -1,0 +1,8 @@
+[["FinalVerificationGapFourBridge.forest_gap_four_of_finite_certificate",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

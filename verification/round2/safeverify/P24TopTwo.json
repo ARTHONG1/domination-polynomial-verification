@@ -1,0 +1,48 @@
+[["FinalVerificationP24TopTwo.two_compl_bad_is_leaf_nbr",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopTwo.penultimate_domination_coefficient_exact",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopTwo.forbidden_pairs_eq_leaf_nbr_image",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopTwo.nondom_iff_has_closed_nbr",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopTwo.forbiddenPairs",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopTwo.forbidden_pairs_count_eq_leaves",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

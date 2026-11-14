@@ -1,0 +1,99 @@
+{
+  "type": "direct_definition_Prufer_exhaustion",
+  "orders": [
+    {
+      "n": 3,
+      "trees": 3,
+      "stars": 3,
+      "equalities": 3,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    },
+    {
+      "n": 4,
+      "trees": 16,
+      "stars": 4,
+      "equalities": 4,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    },
+    {
+      "n": 5,
+      "trees": 125,
+      "stars": 5,
+      "equalities": 5,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    },
+    {
+      "n": 6,
+      "trees": 1296,
+      "stars": 6,
+      "equalities": 6,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    },
+    {
+      "n": 7,
+      "trees": 16807,
+      "stars": 7,
+      "equalities": 7,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    },
+    {
+      "n": 8,
+      "trees": 262144,
+      "stars": 8,
+      "equalities": 8,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    },
+    {
+      "n": 9,
+      "trees": 4782969,
+      "stars": 9,
+      "equalities": 9,
+      "inequality_violations": 0,
+      "star_false_positives": 0,
+      "star_false_negatives": 0,
+      "top_count_violations": 0,
+      "last_step_violations": 0,
+      "gamma_bound_violations": 0,
+      "first_bad_word": -1
+    }
+  ],
+  "total_labelled_trees": 5063360,
+  "overall": "pass",
+  "note": "Exact rational arithmetic; no recurrence or manuscript leaf formula used."
+}

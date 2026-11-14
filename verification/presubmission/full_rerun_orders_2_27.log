@@ -1,0 +1,62 @@
+order 2 done
+order 3 done
+order 4 done
+order 5 done
+order 6 done
+order 7 done
+order 8 done
+order 9 done
+order 10 done
+order 11 done
+order 12 done
+order 13 done
+order 14 done
+order 15 done
+order 16 done
+order 17 done
+order 18 done
+order 19 done
+order 20 done
+order 21 done
+order 22 done
+order 23 done
+order 24 done
+order 25 done
+order 26 done
+order 27 done
+program 1, order 23 parts 10 trees 14828074 expected 14828074 non-log-concave 0
+program 2, order 23 trees 14828074 non-log-concave 0
+program 1, order 24 parts 10 trees 39299897 expected 39299897 non-log-concave 0
+program 2, order 24 trees 39299897 non-log-concave 0
+program 1, order 25 parts 10 trees 104636890 expected 104636890 non-log-concave 0
+program 2, order 25 trees 104636890 non-log-concave 0
+program 1, order 26 parts 10 trees 279793450 expected 279793450 non-log-concave 0
+program 2, order 26 trees 279793450 non-log-concave 0
+program 1, order 27 parts 10 trees 751065460 expected 751065460 non-log-concave 1
+program 2, order 27 trees 751065460 non-log-concave 1
+orders 2..27  trees examined (with K_1): 1198738056  non-log-concave: {27: 1}  max mean jump: 1.030582
+ALL CHECKS PASSED
+{
+ "trees_of_order_2_to_22": 9114284,
+ "gap4_forests_with_n_minus_gamma_le_13": 1290927,
+ "gap4_forests_by_order": {
+  "6": 1,
+  "8": 8,
+  "9": 2,
+  "10": 47,
+  "11": 36,
+  "12": 259,
+  "13": 350,
+  "14": 1357,
+  "15": 2635,
+  "16": 7126,
+  "17": 16755,
+  "18": 37535,
+  "19": 95264,
+  "20": 196287,
+  "21": 477328,
+  "22": 455937
+ }
+}
+T_k log-concave: {1: True, 2: True, 3: False, 4: False, 5: False, 6: False, 7: False, 8: False}
+COMP_EXIT=0

@@ -1,0 +1,263 @@
+{
+ "family": [
+  {
+   "k": [
+    2,
+    3,
+    3
+   ],
+   "order": 28,
+   "failing_indices": [
+    10
+   ],
+   "gamma": 9
+  },
+  {
+   "k": [
+    2,
+    3,
+    4
+   ],
+   "order": 31,
+   "failing_indices": [
+    11
+   ],
+   "gamma": 10
+  },
+  {
+   "k": [
+    3,
+    3,
+    3
+   ],
+   "order": 31,
+   "failing_indices": [
+    11
+   ],
+   "gamma": 10
+  },
+  {
+   "k": [
+    2,
+    3,
+    5
+   ],
+   "order": 34,
+   "failing_indices": [
+    12
+   ],
+   "gamma": 11
+  },
+  {
+   "k": [
+    2,
+    4,
+    4
+   ],
+   "order": 34,
+   "failing_indices": [
+    12
+   ],
+   "gamma": 11
+  },
+  {
+   "k": [
+    3,
+    3,
+    4
+   ],
+   "order": 34,
+   "failing_indices": [
+    12
+   ],
+   "gamma": 11
+  },
+  {
+   "k": [
+    1,
+    5,
+    5
+   ],
+   "order": 37,
+   "failing_indices": [
+    13
+   ],
+   "gamma": 12
+  },
+  {
+   "k": [
+    2,
+    4,
+    5
+   ],
+   "order": 37,
+   "failing_indices": [
+    13
+   ],
+   "gamma": 12
+  },
+  {
+   "k": [
+    3,
+    3,
+    5
+   ],
+   "order": 37,
+   "failing_indices": [
+    13
+   ],
+   "gamma": 12
+  },
+  {
+   "k": [
+    3,
+    4,
+    4
+   ],
+   "order": 37,
+   "failing_indices": [
+    13
+   ],
+   "gamma": 12
+  },
+  {
+   "k": [
+    2,
+    2,
+    3,
+    4
+   ],
+   "order": 38,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 12
+  },
+  {
+   "k": [
+    2,
+    3,
+    3,
+    3
+   ],
+   "order": 38,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 12
+  },
+  {
+   "k": [
+    1,
+    5,
+    6
+   ],
+   "order": 40,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 13
+  },
+  {
+   "k": [
+    2,
+    4,
+    6
+   ],
+   "order": 40,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 13
+  },
+  {
+   "k": [
+    2,
+    5,
+    5
+   ],
+   "order": 40,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 13
+  },
+  {
+   "k": [
+    3,
+    3,
+    6
+   ],
+   "order": 40,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 13
+  },
+  {
+   "k": [
+    3,
+    4,
+    5
+   ],
+   "order": 40,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 13
+  },
+  {
+   "k": [
+    4,
+    4,
+    4
+   ],
+   "order": 40,
+   "failing_indices": [
+    14
+   ],
+   "gamma": 13
+  }
+ ],
+ "T_2_3_3_coefficients": [
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  0,
+  1,
+  44,
+  2208,
+  24245,
+  133752,
+  462198,
+  1104881,
+  1929505,
+  2544641,
+  2588691,
+  2059239,
+  1290913,
+  639404,
+  249496,
+  75959,
+  17709,
+  3060,
+  370,
+  28,
+  1
+ ],
+ "forest_example": {
+  "forest": "60 K_2 + T(8,8,8)",
+  "order": 196,
+  "gamma": 85,
+  "max_mean_jump": 1.1228928195874661,
+  "at_rank": 86,
+  "left_wing_end_A": 122,
+  "max_mean_jump_at_ranks_ge_A": -0.7419631141837244,
+  "unimodal": true
+ }
+}

@@ -1,0 +1,45 @@
+{
+  "cauchy_binet_exact_cases": 31248,
+  "variance_jump_algebra_cases": 828,
+  "top_coefficient_factorization_cases": 19894,
+  "W_formula_independent_tree_DP": [
+    {
+      "r": 3,
+      "k": 1,
+      "M": 1,
+      "n": 15,
+      "coefficient_mismatch": 0
+    },
+    {
+      "r": 3,
+      "k": 1,
+      "M": 2,
+      "n": 17,
+      "coefficient_mismatch": 0
+    },
+    {
+      "r": 3,
+      "k": 2,
+      "M": 1,
+      "n": 24,
+      "coefficient_mismatch": 0
+    },
+    {
+      "r": 4,
+      "k": 1,
+      "M": 1,
+      "n": 19,
+      "coefficient_mismatch": 0
+    },
+    {
+      "r": 5,
+      "k": 1,
+      "M": 1,
+      "n": 23,
+      "coefficient_mismatch": 0
+    }
+  ],
+  "W_coefficient_and_theta_bound_cases": 468,
+  "status": "pass",
+  "scope": "Exact algebraic finite checks and independent DP for chosen parameters; universal quantifier still requires proof"
+}

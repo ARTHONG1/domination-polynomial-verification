@@ -1,0 +1,94 @@
+[
+ {
+  "tree": "T(2,2,3)",
+  "order": 25,
+  "gamma": 8,
+  "with_centre": [
+   1,
+   37,
+   552
+  ],
+  "without_centre": [
+   0,
+   0,
+   800
+  ],
+  "d_gamma..d_gamma+2": [
+   1,
+   37,
+   1352
+  ],
+  "d1_squared": 1369,
+  "d0_times_d2": 1352,
+  "logconcave_at_gamma_plus_1": true
+ },
+ {
+  "tree": "U = T(2,2,3) with a pendant P_2 at v_0",
+  "order": 27,
+  "gamma": 9,
+  "with_centre": [
+   2,
+   75,
+   1141
+  ],
+  "without_centre": [
+   0,
+   0,
+   1696
+  ],
+  "d_gamma..d_gamma+2": [
+   2,
+   75,
+   2837
+  ],
+  "d1_squared": 5625,
+  "d0_times_d2": 5674,
+  "logconcave_at_gamma_plus_1": false
+ },
+ {
+  "tree": "T(2,2,2) with a pendant P_2 at v_0",
+  "order": 24,
+  "gamma": 8,
+  "with_centre": [
+   2,
+   61,
+   768
+  ],
+  "without_centre": [
+   0,
+   0,
+   960
+  ],
+  "d_gamma..d_gamma+2": [
+   2,
+   61,
+   1728
+  ],
+  "d1_squared": 3721,
+  "d0_times_d2": 3456,
+  "logconcave_at_gamma_plus_1": true
+ },
+ {
+  "tree": "T(2,3,3)",
+  "order": 28,
+  "gamma": 9,
+  "with_centre": [
+   1,
+   44,
+   784
+  ],
+  "without_centre": [
+   0,
+   0,
+   1424
+  ],
+  "d_gamma..d_gamma+2": [
+   1,
+   44,
+   2208
+  ],
+  "d1_squared": 1936,
+  "d0_times_d2": 2208,
+  "logconcave_at_gamma_plus_1": false
+ }
+]

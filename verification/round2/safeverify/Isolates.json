@@ -1,0 +1,64 @@
+[["FinalVerificationIsolates.reducedRankCard",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.reducedDR",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.domination_isolate_unimodal_iff",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.domination_rank_card_shift",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.domination_rank_below_isolates_zero",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.IsWeakUnimodal",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.domination_number_isolate_shift",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationIsolates.upper_domination_number_isolate_shift",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

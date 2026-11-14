@@ -1,0 +1,9 @@
+{
+  "remark_value": 1290927,
+  "claimed": 1290927,
+  "main_equal": true,
+  "direct_forests_n_le_10": 329,
+  "euler_forests_n_le_10": 329,
+  "crosscheck_mismatch": 0,
+  "examples": []
+}

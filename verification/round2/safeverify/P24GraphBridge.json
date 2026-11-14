@@ -1,0 +1,24 @@
+[["FinalVerificationP24GraphBridge.dominating_compl_excludes_closed_nbr",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24GraphBridge.dominating_top_three_bound",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24GraphBridge.closedNbr",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

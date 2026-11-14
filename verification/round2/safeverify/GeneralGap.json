@@ -1,0 +1,40 @@
+[["FinalVerificationGeneralGap.K",
+  {"targetInfo": {"constInfo": {"kind": "definition"}, "axioms": ["propext"]},
+   "solutionInfo": {"constInfo": {"kind": "definition"}, "axioms": ["propext"]},
+   "failureMode": null}],
+ ["FinalVerificationGeneralGap.forest_unimodal_of_quadratic",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationGeneralGap.K_values",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "sorryAx"]},
+   "solutionInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["propext"]},
+   "failureMode": null}],
+ ["FinalVerificationGeneralGap.K_spec",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Classical.choice", "Quot.sound"]},
+   "failureMode": null}],
+ ["FinalVerificationGeneralGap.forest_not_unimodal_bound",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationGeneralGap.forest_unimodal_of_large",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}]]

@@ -1,0 +1,361 @@
+%% Shared body of the manuscript (used by both journal wrappers), part 1.
+\section{Introduction}\label{sec:intro}
+
+All graphs in this paper are finite and simple. A set $S$ of vertices of a
+graph $G$ is \emph{dominating} if every vertex outside $S$ has a neighbour
+in $S$. Writing $d_j(G)$ for the number of dominating sets of $G$ of
+cardinality $j$, the \emph{domination polynomial} of a graph $G$ of order $n$ is
+\[
+  D(G,x)=\sum_{j=0}^{n} d_j(G)\,x^j .
+\]
+A sequence $(d_0,\dots,d_n)$ of nonnegative numbers is \emph{unimodal} if
+$d_0\le d_1\le\dots\le d_m\ge d_{m+1}\ge\dots\ge d_n$ for some index $m$, and
+\emph{log-concave} if $d_j^2\ge d_{j-1}d_{j+1}$ for $1\le j\le n-1$; a
+polynomial is called unimodal or log-concave if its coefficient sequence is.
+Alikhani and Peng~\cite{AP} conjectured that the domination polynomial of
+every graph is unimodal. The conjecture is open, even for trees.
+
+Much of what is known is recorded in
+\cite{BB22,BO,BS,DHP,GZ,Omar}. Beaton and Brown~\cite{BB22} proved unimodality for
+graphs of sufficiently large minimum degree and exhibited a graph on nine
+vertices whose domination polynomial is not log-concave. Burcroff and
+O'Brien~\cite{BO} showed that the coefficients of $D(G,x)$ are nonincreasing
+from about $(n+\Gamma(G))/2$ onwards, where $\Gamma(G)$, the \emph{upper
+domination number}, is the largest cardinality of a minimal dominating set.
+For trees, Beaton and Schoonhoven~\cite{BS} constructed an infinite family
+with non-log-concave domination polynomials, and proved that $D(T,x)$ is
+unimodal for every tree $T$ with $\Gamma(T)-\gamma(T)<3$, where $\gamma$
+denotes the domination number. We call $\Gamma(G)-\gamma(G)$ the
+\emph{upper domination gap} of~$G$; graphs with gap zero are the
+well-dominated graphs.
+
+The purpose of this paper is to extend the result of Beaton and Schoonhoven
+in three directions: from trees to forests, from gap at most two to gap at
+most four, and from a fixed gap to a gap that may grow with the order.
+
+\begin{theorem}\label{thm:gapfour-intro}
+Let $F$ be a forest with $\Gamma(F)-\gamma(F)\le 4$. Then the domination
+polynomial of $F$ is unimodal.
+\end{theorem}
+
+For larger gaps we obtain unimodality for all but finitely many forests of
+each given gap, apart from isolated vertices, which only multiply the
+domination polynomial by a power of~$x$.
+
+\begin{theorem}\label{thm:criterion-intro}
+Let $F$ be a forest of order $n$ with $h=\Gamma(F)-\gamma(F)$, and put
+$K_h=\lceil (h+1)^2/4\rceil$.
+\begin{enumerate}
+\item[\textup{(i)}] If $n-\gamma(F)\ge 3K_h-7$, then $D(F,x)$ is unimodal.
+\item[\textup{(ii)}] If $F$ has no isolated vertices and $D(F,x)$ is not
+unimodal, then $h\ge 3$ and $n\le 6K_h-h-16$.
+\item[\textup{(iii)}] In particular, if $F$ has no isolated vertices and
+$3h^2+4h-19\le 2n$, then $D(F,x)$ is unimodal.
+\end{enumerate}
+\end{theorem}
+
+Part~(iii) applies, for instance, whenever
+$\Gamma(F)-\gamma(F)\le\sqrt{2n/3}-1$. The bound in part~(ii) equals $5$ for
+$h=3$, $22$ for $h=4$ and $33$ for $h=5$. The case $h=3$ of
+Theorem~\ref{thm:gapfour-intro} follows from it by inspecting a single
+forest, the star $K_{1,4}$. The case $h=4$ needs the domination polynomials of
+forests with at most $22$ vertices, and here we rely on a computation which
+establishes more than is needed and may be of independent interest.
+
+\begin{theorem}\label{thm:smalltrees-intro}
+\begin{enumerate}
+\item[\textup{(i)}] The domination polynomial of every tree with at most $\MaxLC$
+vertices is log-concave. Consequently, the domination polynomial of every
+forest all of whose components have at most $\MaxLC$ vertices is log-concave,
+and hence unimodal.
+\item[\textup{(ii)}] Among the $751\,065\,460$ trees with $\MinNonLC$ vertices
+there is exactly one whose domination polynomial is not log-concave.
+\end{enumerate}
+\end{theorem}
+
+The exceptional tree is shown in Figure~\ref{fig:U}; its domination polynomial
+is unimodal. Thus $\MinNonLC$ is the smallest order of a tree with a
+non-log-concave domination polynomial. The trees of Beaton and
+Schoonhoven~\cite{BS} have $9k+4$ vertices and were shown there to be
+non-log-concave for $k\ge4$, that is, from order $40$ on. Further trees and
+graphs with non-log-concave domination polynomials were recently found
+in~\cite{DHP} with the machine-learning software PatternBoost; the trees
+displayed there have $32$ and $58$ vertices. The same paper constructs trees
+whose domination polynomials fail to be log-concave at arbitrarily many
+indices. That the smallest order is $\MinNonLC$ parallels the situation for
+the independence polynomial, for which Kadrawi and Levit~\cite{KL} found that
+log-concavity first fails for trees of order~$26$.
+
+\subsection*{Method}
+For a dominating set $S$, a vertex $v\in S$ is \emph{critical} if
+$S\setminus\{v\}$ is not dominating; let $a(S)$ be the number of critical
+vertices of $S$. Counting pairs of nested dominating sets of consecutive
+sizes shows that $d_{j-1}\le d_j$ holds exactly when the average of $a(S)$
+over the dominating sets of size $j$ is at least $2j-n-1$; this observation
+is the basis of~\cite{BS}. Beaton and Schoonhoven proved that every
+dominating set $S$ of a tree $T$ satisfies
+\begin{equation}\label{eq:BS-bounds}
+  2\gamma(T)-|S|\;\le\; a(S)\;\le\; 2\Gamma(T)-|S| ,
+\end{equation}
+and deduced that the coefficients increase up to about $(n+2\gamma)/3$ and
+decrease from about $(n+2\Gamma)/3$ on, which leaves at most one undetermined
+step when $\Gamma-\gamma\le2$.
+
+Our contribution has two parts. First, we give a short proof of the upper
+bound in~\eqref{eq:BS-bounds} that works for every bipartite graph and
+establishes the bound $|S|+a(S)\le 2\alpha(G)$, where $\alpha$ is the
+independence number (Lemma~\ref{lem:upper}). The original proof for trees
+in~\cite{BS} is long and relies on a reconfiguration argument. As a
+by-product, the decreasing segment and the upper bound on the average order
+of dominating sets from~\cite{BS} extend to all bipartite graphs
+(Corollary~\ref{cor:segments}). Second, and more importantly, we control the
+window that the two monotone segments leave open. Writing $c_j$ for the
+average of $a(S)$ over dominating sets of size $j$, a \emph{valley}
+$d_{i-1}\ge d_i<d_{i+1}$ forces $c_{i+1}-c_i>2$ (Lemma~\ref{lem:valley}),
+whereas a covariance inequality between consecutive ranks, combined with
+\eqref{eq:BS-bounds} and an elementary variance bound, gives
+$c_{j}-c_{j-1}\le 2$ as soon as $j-\gamma\ge\lceil (h+1)^2/4\rceil$
+(Lemma~\ref{lem:jump}). When the order is large compared with the gap, this
+range covers the whole window. Some restriction on $j$ is necessary here: we
+show that $c_{j+1}-c_j<2(j-\gamma)+1$ for every forest and that this bound is
+sharp for trees, so that the differences $c_{j+1}-c_j$ can exceed two and are
+in fact unbounded (Proposition~\ref{prop:jumps}).
+
+\subsection*{Verification}
+Theorem~\ref{thm:gapfour-intro} for gap four and
+Theorem~\ref{thm:smalltrees-intro} depend on exhaustive computations, which
+were carried out by two programs that use different tree generators and separate implementations of equivalent
+forms of the same domination-polynomial recurrence; see
+Appendix~\ref{app:computation}. In addition, the main analytic statements
+have been formalised in Lean~4 with Mathlib~\cite{Lean,Mathlib}; the precise
+scope of the formalisation is described in Appendix~\ref{app:lean}. The
+programs, their outputs and the Lean sources accompany this paper as
+supplementary material.
+
+\subsection*{Organisation}
+Section~\ref{sec:prelim} collects basic facts. Section~\ref{sec:critical}
+contains the two bounds on $a(S)$ and their direct consequences.
+Section~\ref{sec:jump} studies the averages $c_j$, and
+Section~\ref{sec:unimodal} proves Theorem~\ref{thm:criterion-intro} and the
+cases of Theorem~\ref{thm:gapfour-intro} with gap at most three.
+Section~\ref{sec:small} deals with small trees and completes the proof of
+Theorem~\ref{thm:gapfour-intro}. Section~\ref{sec:remarks} contains remarks
+and questions.
+
+\section{Preliminaries}\label{sec:prelim}
+
+Let $G$ be a graph with vertex set $V$ and order $n=|V|$. For $v\in V$ we
+write $N[v]$ for the closed neighbourhood of $v$, so that $S\subseteq V$ is
+dominating if and only if $N[u]\cap S\ne\emptyset$ for every $u\in V$. A
+dominating set is \emph{minimal} if none of its proper subsets is dominating.
+We write $\gamma(G)$ for the minimum cardinality of a dominating set,
+$\Gamma(G)$ for the maximum cardinality of a minimal dominating set, and
+$\alpha(G)$ for the maximum cardinality of an independent set. Let
+$\Dom_j(G)$ be the family of dominating sets of cardinality $j$, so that
+$d_j=d_j(G)=|\Dom_j(G)|$; we put $d_j=0$ for $j<0$ and for $j>n$.
+
+For a dominating set $S$ let
+\[
+  \Crit(S)=\{v\in S:\ S\setminus\{v\}\text{ is not dominating}\},\qquad
+  a(S)=|\Crit(S)| .
+\]
+A vertex $v\in S$ is critical if and only if it has a \emph{private witness}:
+a vertex $u$ with $N[u]\cap S=\{v\}$. A dominating set $S$ is minimal if and
+only if $a(S)=|S|$.
+
+\begin{lemma}\label{lem:basic}
+Let $G$ be a graph of order $n$.
+\begin{enumerate}
+\item[\textup{(i)}] $d_j>0$ if and only if $\gamma(G)\le j\le n$.
+\item[\textup{(ii)}] If $S\subseteq U$ are dominating sets, then
+$\Crit(U)\subseteq\Crit(S)$.
+\item[\textup{(iii)}] For $1\le j\le n$,
+\begin{equation}\label{eq:incidence}
+  (n-j+1)\,d_{j-1}=\sum_{S\in\Dom_j(G)}\bigl(j-a(S)\bigr).
+\end{equation}
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Every superset of a dominating set is dominating.
+
+(ii) Let $v\in\Crit(U)$. If $v\notin S$, then $S\subseteq U\setminus\{v\}$,
+so $U\setminus\{v\}$ would be dominating. Hence $v\in S$, and
+$S\setminus\{v\}\subseteq U\setminus\{v\}$ is not dominating.
+
+(iii) Count the pairs $(S',S)$ with $S'\in\Dom_{j-1}(G)$, $S\in\Dom_j(G)$ and
+$S'\subset S$. Each $S'$ extends to exactly $n-j+1$ sets $S$, and each $S$
+contains exactly $j-a(S)$ dominating subsets of size $j-1$.
+\end{proof}
+
+The next two facts are standard; we include the short proofs.
+
+\begin{lemma}[Ore~\cite{Ore}]\label{lem:ore}
+Let $G$ be a graph of order $n$ without isolated vertices. The complement of
+every minimal dominating set of $G$ is dominating. In particular
+$n\ge\gamma(G)+\Gamma(G)$.
+\end{lemma}
+
+\begin{proof}
+Let $M$ be a minimal dominating set and $v\in M$, with private witness $u$.
+If $u\ne v$, then $u\notin M$ (otherwise $N[u]\cap M\supseteq\{u,v\}$), so
+$v$ has a neighbour outside $M$. If $u=v$, then $v$ has no neighbour in $M$,
+and, not being isolated, has a neighbour outside $M$. Hence $V\setminus M$
+dominates every vertex of $M$. Taking $|M|=\Gamma(G)$ gives
+$\gamma(G)\le n-\Gamma(G)$.
+\end{proof}
+
+\begin{lemma}\label{lem:isolates}
+Let $G$ be a graph with exactly $r$ isolated vertices and let $G^{\circ}$ be
+obtained from $G$ by deleting them. Then
+\[
+  D(G,x)=x^{r}D(G^{\circ},x),\qquad \gamma(G)=\gamma(G^{\circ})+r,\qquad
+  \Gamma(G)=\Gamma(G^{\circ})+r .
+\]
+In particular $G$ and $G^{\circ}$ have the same upper domination gap and the
+same value of $|V|-\gamma$, and $D(G,x)$ is unimodal if and only if
+$D(G^{\circ},x)$ is.
+\end{lemma}
+
+\begin{proof}
+Every dominating set of $G$ contains all isolated vertices, and removing them
+is a bijection between the dominating sets of $G$ and those of $G^{\circ}$
+which lowers the size by $r$ and preserves minimality.
+\end{proof}
+
+\section{Critical vertices in forests and in bipartite graphs}\label{sec:critical}
+
+The first bound is due to Beaton and Schoonhoven~\cite[Lemma~5]{BS} for
+trees. We give a self-contained proof, which follows their idea of removing
+a deepest non-critical vertex and applies verbatim to forests.
+
+\begin{lemma}\label{lem:lower}
+Let $S$ be a dominating set of a forest $F$. Then
+$|S|+a(S)\ge 2\gamma(F)$.
+\end{lemma}
+
+\begin{proof}
+We use induction on $|S|$. If every vertex of $S$ is critical, then
+$|S|+a(S)=2|S|\ge2\gamma(F)$; this covers the case $|S|=\gamma(F)$. Assume
+that $S\setminus\Crit(S)\ne\emptyset$. Root each component of $F$ at one of
+its vertices, define the depth of a vertex as its distance from the root of
+its component, and choose $v\in S\setminus\Crit(S)$ of maximum depth. The
+set $S'=S\setminus\{v\}$ is dominating. We claim that
+\begin{equation}\label{eq:one-more}
+  a(S')\le a(S)+1 .
+\end{equation}
+Then $|S'|+a(S')\le|S|+a(S)$, and the induction hypothesis applied to $S'$
+finishes the proof.
+
+By Lemma~\ref{lem:basic}(ii), $\Crit(S)\subseteq\Crit(S')$. Suppose
+that~\eqref{eq:one-more} fails, and let $x_1\ne x_2$ be vertices of
+$\Crit(S')\setminus\Crit(S)$. For $i=1,2$ choose a private witness $u_i$ of
+$x_i$ with respect to $S'$, so that $N[u_i]\cap S'=\{x_i\}$. Since $x_i$ is
+not critical in $S$, we have $N[u_i]\cap S=\{x_i,v\}$. In particular
+$u_1\ne u_2$, both $u_i$ lie in $N[v]$, and $x_i\in N[u_i]$. Moreover
+$x_i\in S\setminus\Crit(S)$, so the depth of $x_i$ is at most the depth of
+$v$ by the choice of~$v$.
+
+Fix $i$. If $u_i=v$, then $x_i$ is a neighbour of $v$ whose depth does not
+exceed that of $v$; hence $v$ is not a root and $x_i$ is the parent of $v$.
+If $u_i\ne v$, then $u_i$ is a neighbour of $v$. It cannot be a child of
+$v$, because every vertex of $N[u_i]\setminus\{v\}$ would then be deeper than
+$v$, whereas $x_i\in N[u_i]\setminus\{v\}$. Hence $u_i$ is the parent of $v$.
+
+As $u_1\ne u_2$, we may assume that $u_1=v$ and that $u_2=p$ is the parent of
+$v$. By the first case $x_1=p$, so $p\in S'$. But then
+$p\in N[u_2]\cap S'=\{x_2\}$, that is, $x_2=p=x_1$, a contradiction.
+\end{proof}
+
+The lower bound of Lemma~\ref{lem:lower} does not extend to bipartite
+graphs: in the cycle $C_4$ a set $S$ of three vertices has $a(S)=0$, while
+$2\gamma(C_4)-|S|=1$. The upper bound, in contrast, holds for every bipartite
+graph.
+
+\begin{lemma}\label{lem:upper}
+Let $S$ be a dominating set of a bipartite graph $G$. Then
+\[
+  |S|+a(S)\le 2\alpha(G).
+\]
+\end{lemma}
+
+\begin{proof}
+For each $v\in\Crit(S)$ fix a private witness $w(v)$, so that
+$N[w(v)]\cap S=\{v\}$. The map $w$ is injective, since $w(v)$ determines $v$.
+Let
+\[
+  E=\{v\in\Crit(S): w(v)=v\},\qquad B=\Crit(S)\setminus E,\qquad W=w(B).
+\]
+If $v\in B$, then $w(v)\notin S$, because a vertex of $S$ belongs to its own
+closed neighbourhood. Hence $W\cap S=\emptyset$ and $|W|=|B|$.
+
+No vertex of $E$ has a neighbour in $S\cup W$. Indeed, let $v\in E$. As
+$N[v]\cap S=\{v\}$, the vertex $v$ has no neighbour in $S$. If $v$ were
+adjacent to $w(u)$ for some $u\in B$, then $v\in N[w(u)]\cap S=\{u\}$, which
+is impossible because $u\notin E$.
+
+Let $V(G)=X\sqcup Y$ be a bipartition of $G$ and put
+\[
+  I_X=\bigl((S\cup W)\cap X\bigr)\cup(E\cap Y),\qquad
+  I_Y=\bigl((S\cup W)\cap Y\bigr)\cup(E\cap X).
+\]
+Both sets are independent: there are no edges inside $X$ or inside $Y$, and
+no edges between $E$ and $S\cup W$. Since $E\subseteq S$ and $W\cap
+S=\emptyset$,
+\[
+  2\alpha(G)\ge|I_X|+|I_Y|=|S\cup W|+|E|=|S|+|B|+|E|=|S|+a(S). \qedhere
+\]
+\end{proof}
+
+A maximum independent set is a minimal dominating set, so
+$\alpha(G)\le\Gamma(G)$ for every graph $G$. Conversely, applying
+Lemma~\ref{lem:upper} to a minimal dominating set $M$ of a bipartite graph,
+for which $a(M)=|M|$, gives $|M|\le\alpha(G)$. This reproves the classical
+fact~\cite{CFPT} that
+\begin{equation}\label{eq:alpha-Gamma}
+  \Gamma(G)=\alpha(G)\qquad\text{for every bipartite graph } G,
+\end{equation}
+and shows that Lemma~\ref{lem:upper} contains the upper bound
+in~\eqref{eq:BS-bounds}, which is \cite[Lemma~15]{BS}.
+
+\begin{corollary}\label{cor:twosided}
+Every dominating set $S$ of a forest $F$ satisfies
+\begin{equation}\label{eq:twosided}
+  2\gamma(F)-|S|\;\le\;a(S)\;\le\;2\Gamma(F)-|S| .
+\end{equation}
+\end{corollary}
+
+The monotone segments of~\cite[Theorems~6 and~16]{BS} and the bounds on the
+average order of dominating sets of~\cite[Theorem~18]{BS} follow at once,
+now for forests and, on the upper side, for bipartite graphs. Let
+$\operatorname{avd}(G)$ denote the average cardinality of a dominating set
+of~$G$.
+
+\begin{corollary}\label{cor:segments}
+Let $G$ be a graph of order $n$ and let $1\le j\le n$.
+\begin{enumerate}
+\item[\textup{(i)}] If $G$ is a forest and $3j\le n+2\gamma(G)+1$, then
+$d_{j-1}\le d_j$. Moreover $\operatorname{avd}(G)\ge(n+2\gamma(G))/3$.
+\item[\textup{(ii)}] If $G$ is bipartite and $3j\ge n+2\alpha(G)+1$, then
+$d_{j-1}\ge d_j$. Moreover $\operatorname{avd}(G)\le(n+2\alpha(G))/3$.
+\end{enumerate}
+\end{corollary}
+
+\begin{proof}
+By~\eqref{eq:incidence} and Lemma~\ref{lem:lower},
+$(n-j+1)d_{j-1}\le(2j-2\gamma(G))d_j$, which is at most $(n-j+1)d_j$ when
+$3j\le n+2\gamma(G)+1$. Similarly, Lemma~\ref{lem:upper} gives
+$(n-j+1)d_{j-1}\ge(2j-2\alpha(G))d_j\ge(n-j+1)d_j$ when
+$3j\ge n+2\alpha(G)+1$. Summing~\eqref{eq:incidence} over $j$ gives the
+identity $\sum_S(|S|-a(S))=\sum_S(n-|S|)$ of Beaton and Brown~\cite{BB21},
+where $S$ runs over all dominating sets; that is,
+$2\operatorname{avd}(G)=n+\overline{a}$, where $\overline a$ is the average of
+$a(S)$ over all dominating sets. Inserting $a(S)\ge2\gamma(G)-|S|$,
+respectively $a(S)\le2\alpha(G)-|S|$, and solving for
+$\operatorname{avd}(G)$ gives the two bounds.
+\end{proof}
+
+For bipartite graphs, part~(ii) improves on the threshold of order
+$(n+\Gamma(G))/2$ that holds for all graphs~\cite{BO}, since
+$(n+2\Gamma(G))/3\le(n+\Gamma(G))/2$.
+

@@ -1,0 +1,35 @@
+[["FinalVerificationGapArithmetic.source_condition_floor_iff",
+  {"targetInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["Classical.choice", "propext", "Quot.sound"]},
+   "failureMode": null}],
+ ["FinalVerificationGapArithmetic.K_is_ceil",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Classical.choice", "Quot.sound"]},
+   "failureMode": null}],
+ ["FinalVerificationGapArithmetic.quadratic_excludes_nonunimodality",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationGapArithmetic.K",
+  {"targetInfo": {"constInfo": {"kind": "definition"}, "axioms": ["propext"]},
+   "solutionInfo": {"constInfo": {"kind": "definition"}, "axioms": ["propext"]},
+   "failureMode": null}],
+ ["FinalVerificationGapArithmetic.K_numeric",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "sorryAx"]},
+   "solutionInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["propext"]},
+   "failureMode": null}],
+ ["FinalVerificationGapArithmetic.h_must_be_three",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"}, "axioms": ["propext", "Quot.sound"]},
+   "failureMode": null}]]

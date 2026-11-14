@@ -1,0 +1,40 @@
+[["FinalVerificationP24TopAlgebra.b",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopAlgebra.u",
+  {"targetInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "definition"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopAlgebra.u._proof_1",
+  {"targetInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["propext"]},
+   "solutionInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["propext"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopAlgebra.top_bound_and_star_equality",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopAlgebra.exact_factorization",
+  {"targetInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice", "sorryAx"]},
+   "solutionInfo":
+   {"constInfo": {"kind": "theorem"},
+    "axioms": ["propext", "Quot.sound", "Classical.choice"]},
+   "failureMode": null}],
+ ["FinalVerificationP24TopAlgebra.b._proof_1",
+  {"targetInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["propext"]},
+   "solutionInfo": {"constInfo": {"kind": "theorem"}, "axioms": ["propext"]},
+   "failureMode": null}]]

@@ -1,0 +1,12 @@
+{
+  "graph_order": 27,
+  "figure_order": 27,
+  "all_isomorphic": true,
+  "codes_same_sha256": "a42202d73a87a9c07f5b6d670e1c50ec3ac6f9664dfb4d9b6c997e5d8788432f",
+  "witness_files": [
+    "program1_order_27_witness.txt",
+    "program2_order_27_witness.txt"
+  ],
+  "string_code_length": 54,
+  "failures": []
+}

@@ -1,0 +1,131 @@
+name: Verification
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  computation-check:
+    name: C++17 (3 Generators) & Python Exact Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verify repository SHA-256 checksums
+        run: |
+          sha256sum -c SUPPLEMENT_SHA256SUMS
+          sha256sum -c SHA256SUMS
+
+      - name: Run Program I & Program II on orders 2..22 in clean directory
+        run: |
+          cp -r computation /tmp/comp_run
+          cd /tmp/comp_run
+          ./run_all.sh 22
+          python3 - <<'PY'
+          import json, os
+          from pathlib import Path
+          fresh = Path("/tmp/comp_run/results")
+          ref = Path(os.environ["GITHUB_WORKSPACE"]) / "computation/results"
+          for n in range(2, 23):
+              for p in ("program1", "program2"):
+                  a = json.loads((fresh / f"{p}_order_{n:02d}.jsonl").read_text())
+                  b = json.loads((ref / f"{p}_order_{n:02d}.jsonl").read_text())
+                  for k in b:
+                      if k == "max_mean_jump":
+                          assert abs(a[k] - b[k]) < 1e-5, (p, n, k, a[k], b[k])
+                      else:
+                          assert a[k] == b[k], (p, n, k, a[k], b[k])
+          print("Orders 2..22 outputs match committed reference files.")
+          PY
+
+      - name: Run third independent tree generator (partition-multiset + Jordan center) on orders 2..17
+        run: |
+          c++ -O3 -std=c++17 -Wall -Wextra independent_checks/independent_third_tree_verifier.cpp -o /tmp/third_verifier
+          /tmp/third_verifier 17 > /tmp/third_17.jsonl
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          fresh = [json.loads(l) for l in Path("/tmp/third_17.jsonl").read_text().splitlines() if l.strip()]
+          ref = [json.loads(l) for l in Path("independent_checks/third_verifier_orders_2_to_19.jsonl").read_text().splitlines() if l.strip()]
+          assert fresh == ref[:len(fresh)]
+          print("Third generator matches reference fingerprints across orders 2..17.")
+          PY
+
+      - name: Direct 2^27 subset check on the 27-vertex witness U
+        run: |
+          out=$(/tmp/comp_run/bin/bruteforce_tree 0 1 2 3 1 5 6 1 8 9 0 11 12 13 11 15 16 0 18 19 20 18 22 23 0 25)
+          echo "$out"
+          expected="0 0 0 0 0 0 0 0 0 2 75 2837 27278 132791 403364 842457 1277429 1454340 1270263 862444 458002 190138 61213 15015 2718 343 27 1"
+          test "$out" = "$expected"
+
+      - name: Run auxiliary scripts & exact rational stress tests (disconnected forests, cyclic bipartite, Cauchy-Binet)
+        run: |
+          python3 independent_checks/adversarial_math_stress_test.py
+          cd /tmp/comp_run
+          python3 analyze.py
+          python3 centre_split.py
+          python3 families.py
+          python3 jumps/verify_counterexample.py
+          python3 jumps/check_boundary.py
+
+      - name: Round-2 checks (third generator vs committed output, canonical forms, labelled trees, manuscript numbers)
+        working-directory: verification/round2/checks
+        run: |
+          c++ -O3 -std=c++17 -pthread audit_third/third_check.cpp -o /tmp/third_check
+          /tmp/third_check 18 > /tmp/third18.jsonl
+          python3 - <<'PY'
+          import json
+          a = [json.loads(l) for l in open('/tmp/third18.jsonl') if l.startswith('{')]
+          b = [json.loads(l) for l in open('third_jump_27.jsonl') if l.startswith('{')]
+          assert a == b[:len(a)] and len(a) == 17
+          print("Round-2 third generator matches committed output for orders 2..18.")
+          PY
+          c++ -O3 -std=c++17 -pthread audit_canonical_22.cpp -o /tmp/canon
+          /tmp/canon 22 0 10 > /tmp/canonical_22.jsonl
+          cmp /tmp/canonical_22.jsonl canonical_22.jsonl
+          python3 audit_third/compare_results.py > /dev/null
+          python3 audit_bruteforce16.py
+          python3 audit_source_numeric_parity.py
+          python3 check_p24_final.py | tail -1
+          git diff --exit-code -- .
+
+      - name: Round-2 quick checks (labelled censuses, 2^27 subsets of U, identities, Table 1, recurrence vs definition)
+        run: verification/round2/checks/run_quick_checks.sh
+
+  lean-check:
+    name: Lean 4.27.0 Build & Axiom Audit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl https://elan.lean-lang.org/elan-init.sh -sSf | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: Fetch Mathlib cache, build Lean proofs, and verify the axiom audits
+        working-directory: lean
+        run: |
+          lake exe cache get
+          lake build
+          lake env lean CheckAxioms.lean > /tmp/CheckAxioms.fresh.txt
+          cat /tmp/CheckAxioms.fresh.txt
+          ! grep -q "sorryAx" /tmp/CheckAxioms.fresh.txt
+          lake env lean RefereeAudit.lean > /tmp/RefereeAudit.fresh.txt
+          cat /tmp/RefereeAudit.fresh.txt
+          ! grep -q "sorryAx" /tmp/RefereeAudit.fresh.txt
+          lake env lean Round2CheckAxioms.lean > /tmp/Round2CheckAxioms.fresh.txt
+          cat /tmp/Round2CheckAxioms.fresh.txt
+          ! grep -q "sorryAx" /tmp/Round2CheckAxioms.fresh.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          for name in ("CheckAxioms", "RefereeAudit", "Round2CheckAxioms"):
+              a = " ".join(Path(f"/tmp/{name}.fresh.txt").read_text().split())
+              b = " ".join(Path(f"{name}.output.txt").read_text().split())
+              assert a == b, f"Mismatch in {name}"
+          print("CheckAxioms, RefereeAudit and Round2CheckAxioms outputs match the committed references.")
+          PY

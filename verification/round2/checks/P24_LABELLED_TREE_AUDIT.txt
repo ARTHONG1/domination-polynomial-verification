@@ -1,0 +1,5 @@
+n=5 trees=125 inequality_failures=0 star_equalities=5
+n=6 trees=1296 inequality_failures=0 star_equalities=6
+n=7 trees=16807 inequality_failures=0 star_equalities=7
+n=8 trees=262144 inequality_failures=0 star_equalities=8
+P24_ALL_LABELLED_PASS=true trees=280372 mismatches=0 equality_failures=0

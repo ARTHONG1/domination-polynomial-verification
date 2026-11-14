@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Unimodality of domination polynomials of forests with upper domination gap at most four: manuscript, programs, Lean formalisation and verification record"
+authors:
+  - family-names: Hong
+    given-names: Chanu
+    affiliation: "Gyeongin National University of Education"
+    email: skdl3965@gmail.com
+type: software
+repository-code: "https://github.com/ARTHONG1/domination-polynomial-verification"
+date-released: 2026-11-14
+keywords:
+  - domination polynomial
+  - unimodality
+  - log-concavity
+  - forest
+  - Lean 4

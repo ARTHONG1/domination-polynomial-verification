@@ -1,0 +1,62 @@
+{
+  "method": "fresh exhaustive subset-based definitions, independent of submitted generators and DP",
+  "by_order": {
+    "0": {
+      "graphs_tested": 1,
+      "forests_tested": 1,
+      "scope": "all labelled graphs"
+    },
+    "1": {
+      "graphs_tested": 1,
+      "forests_tested": 1,
+      "scope": "all labelled graphs"
+    },
+    "2": {
+      "graphs_tested": 2,
+      "forests_tested": 2,
+      "scope": "all labelled graphs"
+    },
+    "3": {
+      "graphs_tested": 8,
+      "forests_tested": 7,
+      "scope": "all labelled graphs"
+    },
+    "4": {
+      "graphs_tested": 64,
+      "forests_tested": 38,
+      "scope": "all labelled graphs"
+    },
+    "5": {
+      "graphs_tested": 1024,
+      "forests_tested": 291,
+      "scope": "all labelled graphs"
+    },
+    "6": {
+      "graphs_tested": 2932,
+      "forests_tested": 2932,
+      "scope": "all labelled forests only"
+    }
+  },
+  "checks": {
+    "support": 4032,
+    "critical_monotonicity_pairs": 380988,
+    "forest_lower_bound": 3272,
+    "forest_two_sided": 3272,
+    "bipartite_upper_bound": 3360,
+    "ore": 2456,
+    "forest_avd": 3272,
+    "bipartite_avd": 3360,
+    "empty_graph": 1,
+    "incidence": 22997,
+    "forest_increasing_segment": 12029,
+    "mean_identity": 16961,
+    "general_Hh_criterion": 3230,
+    "gap_le3_forest": 3265,
+    "bipartite_decreasing_segment": 6441,
+    "covariance": 12930,
+    "forest_jump_bound": 8689,
+    "general_forest_criterion_iii": 1808
+  },
+  "all_passed": true,
+  "scope": "finite definition-based test"
+}

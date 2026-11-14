@@ -1,0 +1,90 @@
+%% Standard LaTeX article wrapper for compiling the shared English manuscript body
+%% without requiring any publisher-specific document class.
+\documentclass[11pt,a4paper]{article}
+\usepackage[top=26mm,bottom=26mm,left=26mm,right=26mm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,amsthm,mathtools}
+\usepackage{tikz}
+\usepackage[title]{appendix}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{problem}[theorem]{Problem}
+
+\newcommand{\Dom}{\mathcal{D}}
+\newcommand{\Crit}{\operatorname{Crit}}
+\DeclareUrlCommand\lean{\urlstyle{tt}\def\UrlBreaks{\do\_}}
+\input{numbers}
+\input{author_email}
+
+\title{Unimodality of domination polynomials of forests with upper domination gap at most four}
+\author{Chanu Hong\\{\normalsize Gyeongin National University of Education, Incheon, Republic of Korea}\\{\normalsize \texttt{\AuthorEmail}}}
+\date{November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Let $\gamma(G)$ and $\Gamma(G)$ denote the domination number and the upper
+domination number of a graph $G$. Beaton and Schoonhoven (2024) proved that the
+domination polynomial of a tree $T$ is unimodal whenever
+$\Gamma(T)-\gamma(T)\le2$. We prove that the domination polynomial of every
+forest $F$ with $\Gamma(F)-\gamma(F)\le4$ is unimodal. More generally, a
+forest of order $n$ without isolated vertices whose domination polynomial is
+not unimodal satisfies $n\le6\lceil(h+1)^2/4\rceil-h-16$, where
+$h=\Gamma(F)-\gamma(F)$; in particular, the domination polynomial of such a
+forest is unimodal whenever $h\le\sqrt{2n/3}-1$. The proofs rest on a short argument showing that
+a dominating set $S$ of a bipartite graph $G$ has at most $2\alpha(G)-|S|$
+critical vertices, and on a variance estimate which shows that the average
+number of critical vertices of the dominating sets of size $j$ cannot
+increase by more than two when $j$ increases by one, provided that
+$j-\gamma(F)\ge\lceil(h+1)^2/4\rceil$. The case
+$\Gamma-\gamma=4$ relies in addition on an exhaustive computation, which shows
+that the domination polynomial of every tree with at most $\MaxLC$ vertices is
+log-concave, whereas exactly one tree with $\MinNonLC$ vertices is not. The main analytic steps have been formalised in Lean~4.
+
+\medskip\noindent\textbf{Keywords:} Domination polynomial, Unimodality, Log-concavity, Upper domination number, Forest, Bipartite graph.
+
+\noindent\textbf{2020 Mathematics Subject Classification:} 05C69, 05C31, 05C05.
+\end{abstract}
+
+\input{body_part1}
+\input{body_part2}
+
+\subsection*{Supplementary information}
+The supplementary material contains the source code of the two programs
+described in Appendix~\ref{app:computation} together with their complete
+outputs, the auxiliary scripts mentioned in the text, and the Lean~4 sources
+described in Appendix~\ref{app:lean}.
+
+\begin{appendices}
+\input{appendix}
+\end{appendices}
+
+\input{refs_springer}
+
+\section*{Statements and Declarations}
+\subsection*{Funding}
+No funding was received for conducting this study.
+
+\subsection*{Competing interests}
+The author has no relevant financial or non-financial interests to disclose.
+
+\subsection*{Data and code availability}
+All data generated during this study, and the code that produced them, are
+included in the supplementary material.
+
+\subsection*{Use of AI tools}
+Large language model assistants were used in this work to search for
+proofs, to write the computer programs and the Lean code, and to draft the
+text. The author has checked all arguments and takes full responsibility for
+the content.
+
+\end{document}

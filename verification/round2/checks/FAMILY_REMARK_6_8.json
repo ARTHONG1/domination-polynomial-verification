@@ -1,0 +1,129 @@
+{
+  "parameters_checked": 268,
+  "by_order": {
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 2,
+    "6": 2,
+    "7": 1,
+    "8": 2,
+    "9": 3,
+    "10": 2,
+    "11": 3,
+    "12": 4,
+    "13": 3,
+    "14": 4,
+    "15": 6,
+    "16": 4,
+    "17": 6,
+    "18": 8,
+    "19": 5,
+    "20": 7,
+    "21": 11,
+    "22": 7,
+    "23": 10,
+    "24": 14,
+    "25": 8,
+    "26": 12,
+    "27": 18,
+    "28": 10,
+    "29": 16,
+    "30": 23,
+    "31": 12,
+    "32": 19,
+    "33": 29,
+    "34": 14
+  },
+  "non_logconcave_families": [
+    {
+      "k": [
+        2,
+        3,
+        3
+      ],
+      "r": 3,
+      "n": 28,
+      "gamma": 9,
+      "logconcavity_failure_indices": [
+        10
+      ],
+      "unimodal": true
+    },
+    {
+      "k": [
+        2,
+        3,
+        4
+      ],
+      "r": 3,
+      "n": 31,
+      "gamma": 10,
+      "logconcavity_failure_indices": [
+        11
+      ],
+      "unimodal": true
+    },
+    {
+      "k": [
+        2,
+        3,
+        5
+      ],
+      "r": 3,
+      "n": 34,
+      "gamma": 11,
+      "logconcavity_failure_indices": [
+        12
+      ],
+      "unimodal": true
+    },
+    {
+      "k": [
+        2,
+        4,
+        4
+      ],
+      "r": 3,
+      "n": 34,
+      "gamma": 11,
+      "logconcavity_failure_indices": [
+        12
+      ],
+      "unimodal": true
+    },
+    {
+      "k": [
+        3,
+        3,
+        3
+      ],
+      "r": 3,
+      "n": 31,
+      "gamma": 10,
+      "logconcavity_failure_indices": [
+        11
+      ],
+      "unimodal": true
+    },
+    {
+      "k": [
+        3,
+        3,
+        4
+      ],
+      "r": 3,
+      "n": 34,
+      "gamma": 11,
+      "logconcavity_failure_indices": [
+        12
+      ],
+      "unimodal": true
+    }
+  ],
+  "expected_six_match": true,
+  "all_six_unimodal": true,
+  "all_six_only_gamma_plus_one": true,
+  "status": "pass",
+  "scope": "r 1..5, sorted nonnegative k, 1+r+3Σk ≤34; independent rooted DP"
+}

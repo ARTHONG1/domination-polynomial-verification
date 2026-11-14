@@ -1,0 +1,110 @@
+import Mathlib
+import domination_gap3.FinalVerificationOreAlphaCandidate
+import domination_gap3.FinalVerificationIsolatesCandidate
+import domination_gap3.FinalVerificationGapFourBridgeCandidate
+import domination_gap3.FinalVerificationJumpBoundCandidate
+import domination_gap3.FinalVerificationGapArithmeticCandidate
+import domination_gap3.FinalVerificationMeanJumpNoStrictCandidate
+import domination_gap3.FinalVerificationGeneralHGraphCandidate
+import domination_gap3.FinalVerificationGeneralGapCandidate
+import domination_gap3.FinalVerificationGapThreeFullCandidate
+import domination_gap3.FinalVerificationP24TopAlgebraCandidate
+import domination_gap3.FinalVerificationP24OverlapCandidate
+import domination_gap3.FinalVerificationP24GraphBridgeCandidate
+import domination_gap3.FinalVerificationP24TreeLeavesCandidate
+import domination_gap3.FinalVerificationP24TopTwoCandidate
+import domination_gap3.FinalVerificationP24IntegerBoundCandidate
+import domination_gap3.FinalVerificationP24FinalCandidate
+import domination_gap3.LogConcaveProductCandidate
+
+/-!
+Axiom audit for the additional statements certified in verification round 2.
+Run from the lean/ directory after lake build:
+
+    lake env lean Round2CheckAxioms.lean
+
+Every line of output must list only propext, Classical.choice and Quot.sound.
+The statements themselves are fixed in verification/round2/lean_targets/.
+-/
+
+-- FinalVerificationOreAlpha
+#print axioms FinalVerificationOreAlpha.bipartite_upperdom_eq_independence
+#print axioms FinalVerificationOreAlpha.ore_gamma_plus_upperdom_le_card
+
+-- FinalVerificationIsolates
+#print axioms FinalVerificationIsolates.domination_isolate_unimodal_iff
+#print axioms FinalVerificationIsolates.domination_rank_card_shift
+#print axioms FinalVerificationIsolates.domination_rank_below_isolates_zero
+#print axioms FinalVerificationIsolates.domination_number_isolate_shift
+#print axioms FinalVerificationIsolates.upper_domination_number_isolate_shift
+
+-- FinalVerificationGapFourBridge
+#print axioms FinalVerificationGapFourBridge.forest_gap_four_of_finite_certificate
+
+-- FinalVerificationJumpBound
+#print axioms FinalVerificationJumpBound.forest_critical_jump_strict_upper_bound
+
+-- FinalVerificationGapArithmetic
+#print axioms FinalVerificationGapArithmetic.source_condition_floor_iff
+#print axioms FinalVerificationGapArithmetic.K_is_ceil
+#print axioms FinalVerificationGapArithmetic.quadratic_excludes_nonunimodality
+#print axioms FinalVerificationGapArithmetic.K_numeric
+#print axioms FinalVerificationGapArithmetic.h_must_be_three
+
+-- FinalVerificationMeanJumpNoStrict
+#print axioms FinalVerificationMeanJumpNoStrict.mean_jump_without_h_lt_K
+
+-- FinalVerificationGeneralHGraph
+#print axioms FinalVerificationGeneralHGraph.graph_unimodal_of_Hh_large
+
+-- FinalVerificationGeneralGap
+#print axioms FinalVerificationGeneralGap.forest_unimodal_of_quadratic
+#print axioms FinalVerificationGeneralGap.K_values
+#print axioms FinalVerificationGeneralGap.K_spec
+#print axioms FinalVerificationGeneralGap.forest_not_unimodal_bound
+#print axioms FinalVerificationGeneralGap.forest_unimodal_of_large
+
+-- FinalVerificationGapThreeFull
+#print axioms FinalVerificationGapThreeFull.forest_gap_le_three_unimodal
+
+-- FinalVerificationP24TopAlgebra
+#print axioms FinalVerificationP24TopAlgebra.top_bound_and_star_equality
+#print axioms FinalVerificationP24TopAlgebra.exact_factorization
+
+-- FinalVerificationP24Overlap
+#print axioms FinalVerificationP24Overlap.triple_supersets_card
+#print axioms FinalVerificationP24Overlap.allowed_triples_bound
+#print axioms FinalVerificationP24Overlap.distinct_pair_triple_inter_le_one
+#print axioms FinalVerificationP24Overlap.union_lower_from_pairwise_intersections
+
+-- FinalVerificationP24GraphBridge
+#print axioms FinalVerificationP24GraphBridge.dominating_compl_excludes_closed_nbr
+#print axioms FinalVerificationP24GraphBridge.dominating_top_three_bound
+
+-- FinalVerificationP24TreeLeaves
+#print axioms FinalVerificationP24TreeLeaves.leaf_closed_nbr_card_two
+#print axioms FinalVerificationP24TreeLeaves.adjacent_degree_one_vertices_force_card_two
+#print axioms FinalVerificationP24TreeLeaves.distinct_degree_one_closed_nbr
+#print axioms FinalVerificationP24TreeLeaves.connected_graph_top_three_count_bound
+
+-- FinalVerificationP24TopTwo
+#print axioms FinalVerificationP24TopTwo.two_compl_bad_is_leaf_nbr
+#print axioms FinalVerificationP24TopTwo.penultimate_domination_coefficient_exact
+#print axioms FinalVerificationP24TopTwo.forbidden_pairs_eq_leaf_nbr_image
+#print axioms FinalVerificationP24TopTwo.nondom_iff_has_closed_nbr
+#print axioms FinalVerificationP24TopTwo.forbidden_pairs_count_eq_leaves
+
+-- FinalVerificationP24IntegerBound
+#print axioms FinalVerificationP24IntegerBound.connected_top_coefficient_inequality
+#print axioms FinalVerificationP24IntegerBound.connected_leaves_card_le_n_minus_one
+#print axioms FinalVerificationP24IntegerBound.real_choose_three
+
+-- FinalVerificationP24Final
+#print axioms FinalVerificationP24Final.top_jump_eq_iff_star
+#print axioms FinalVerificationP24Final.top_jump_le
+#print axioms FinalVerificationP24Final.top_minus_one_count
+#print axioms FinalVerificationP24Final.last_step
+
+-- LogConcaveProduct (Lemma 6.2 and the unimodality step of Corollary 6.3)
+#print axioms LogConcaveProduct.polynomial_real_mul_nonnegative_logconcave_gapless
+#print axioms LogConcaveProduct.polynomial_logconcave_gapless_unimodal

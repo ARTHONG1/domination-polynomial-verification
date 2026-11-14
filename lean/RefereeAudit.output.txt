@@ -1,0 +1,5 @@
+'RefereeAudit.isDominating_defs_agree' depends on axioms: [propext, Quot.sound]
+'RefereeAudit.critical_defs_agree' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefereeAudit.unimodal_prepend_zeros' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefereeAudit.lemma_jump_without_h_lt_K' depends on axioms: [propext, Classical.choice, Quot.sound]
+'RefereeAudit.short_tail_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]

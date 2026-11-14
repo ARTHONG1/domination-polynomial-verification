@@ -1,0 +1,82 @@
+'FinalVerificationOreAlpha.bipartite_upperdom_eq_independence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationOreAlpha.ore_gamma_plus_upperdom_le_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationIsolates.domination_isolate_unimodal_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationIsolates.domination_rank_card_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationIsolates.domination_rank_below_isolates_zero' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationIsolates.domination_number_isolate_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationIsolates.upper_domination_number_isolate_shift' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationGapFourBridge.forest_gap_four_of_finite_certificate' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationJumpBound.forest_critical_jump_strict_upper_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationGapArithmetic.source_condition_floor_iff' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGapArithmetic.K_is_ceil' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGapArithmetic.quadratic_excludes_nonunimodality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationGapArithmetic.K_numeric' depends on axioms: [propext]
+'FinalVerificationGapArithmetic.h_must_be_three' depends on axioms: [propext, Quot.sound]
+'FinalVerificationMeanJumpNoStrict.mean_jump_without_h_lt_K' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGeneralHGraph.graph_unimodal_of_Hh_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGeneralGap.forest_unimodal_of_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGeneralGap.K_values' depends on axioms: [propext]
+'FinalVerificationGeneralGap.K_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGeneralGap.forest_not_unimodal_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGeneralGap.forest_unimodal_of_large' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationGapThreeFull.forest_gap_le_three_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24TopAlgebra.top_bound_and_star_equality' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24TopAlgebra.exact_factorization' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Overlap.triple_supersets_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Overlap.allowed_triples_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Overlap.distinct_pair_triple_inter_le_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24Overlap.union_lower_from_pairwise_intersections' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24GraphBridge.dominating_compl_excludes_closed_nbr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24GraphBridge.dominating_top_three_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24TreeLeaves.leaf_closed_nbr_card_two' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24TreeLeaves.adjacent_degree_one_vertices_force_card_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24TreeLeaves.distinct_degree_one_closed_nbr' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24TreeLeaves.connected_graph_top_three_count_bound' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24TopTwo.two_compl_bad_is_leaf_nbr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24TopTwo.penultimate_domination_coefficient_exact' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24TopTwo.forbidden_pairs_eq_leaf_nbr_image' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24TopTwo.nondom_iff_has_closed_nbr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24TopTwo.forbidden_pairs_count_eq_leaves' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24IntegerBound.connected_top_coefficient_inequality' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24IntegerBound.connected_leaves_card_le_n_minus_one' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'FinalVerificationP24IntegerBound.real_choose_three' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Final.top_jump_eq_iff_star' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Final.top_jump_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Final.top_minus_one_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'FinalVerificationP24Final.last_step' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LogConcaveProduct.polynomial_real_mul_nonnegative_logconcave_gapless' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'LogConcaveProduct.polynomial_logconcave_gapless_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]

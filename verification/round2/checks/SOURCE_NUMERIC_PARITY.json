@@ -1,0 +1,43 @@
+{
+  "status": "pass",
+  "submission_pdf_sha256": "4df950b679a7c906e53721b9fc551e482042dfa824a30aa5d6014f68dfa99c63",
+  "source_sha256": "47d7d901af2903d30f48b6a0a084341c4d0ee7ea27cdcfbad505f8e160dcb375",
+  "exact_U_source_monomials": 19,
+  "exact_U_coefficient_mismatches": {},
+  "rooted_unrooted_table_rows_checked": 26,
+  "table_discrepancies": {},
+  "archived_third_generator_count_discrepancies": {},
+  "printed_macros_vs_independent_counts": {
+    "MaxLC": [
+      26,
+      26
+    ],
+    "MinNonLC": [
+      27,
+      27
+    ],
+    "MaxOrder": [
+      27,
+      27
+    ],
+    "TotalTreesLC": [
+      447672596,
+      447672596
+    ],
+    "TotalTreesAll": [
+      1198738056,
+      1198738056
+    ]
+  },
+  "macro_discrepancies": {},
+  "program_n2_to16": 32507,
+  "including_K1_n1_to16": 32508,
+  "n22_cumulative": 9114285,
+  "n26_cumulative": 447672596,
+  "n27_cumulative": 1198738056,
+  "n27_free_trees": 751065460,
+  "W_6501_jump_gt_2": true,
+  "W_15485_jump_gt_2p15": true,
+  "existing_independent_numeric_checks_passed": true,
+  "limitation": "This parses fixed submitted TeX numbers and reuses archived numeric computation; not all prose/theorem arguments are certified by this check."
+}

@@ -1,0 +1,30 @@
+{
+  "orders": [
+    2,
+    27
+  ],
+  "total_trees": 1198738056,
+  "max_jump_exact": [
+    27,
+    "73094/70925",
+    10
+  ],
+  "max_jump_float": 1.030581600281988,
+  "restricted_up_to_26_exact": [
+    26,
+    "12/13",
+    24
+  ],
+  "restricted_up_to_26_float": 0.9230769230769231,
+  "heuristic_orders": [
+    34,
+    40,
+    46,
+    52,
+    58
+  ],
+  "heuristic_reports": 10,
+  "heuristic_max": 1.306932,
+  "restricted_census_rows": 24,
+  "violations": []
+}

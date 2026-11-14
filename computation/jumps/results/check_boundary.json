@@ -1,0 +1,29 @@
+{
+  "method": "Prufer exhaustive labelled trees & brute dominating subsets through n=7; random 3-state DP through n=100",
+  "by_order": {
+    "3": {
+      "labelled_trees_checked": 3,
+      "stars_with_equality": 3
+    },
+    "4": {
+      "labelled_trees_checked": 16,
+      "stars_with_equality": 4
+    },
+    "5": {
+      "labelled_trees_checked": 125,
+      "stars_with_equality": 5
+    },
+    "6": {
+      "labelled_trees_checked": 1296,
+      "stars_with_equality": 6
+    },
+    "7": {
+      "labelled_trees_checked": 16807,
+      "stars_with_equality": 7
+    }
+  },
+  "labelled_checked": 18247,
+  "random_dp_checked": 480,
+  "boundary_inequality_failures": 0,
+  "scope": "finite computational validation only; the proof is in Section 7 of the paper"
+}

@@ -1,0 +1,85 @@
+@GapThreeForestConflictCount.forest_critical_inequality : ∀ {α : Type u_1} [Fintype α] [inst : DecidableEq α]
+  (G : SimpleGraph α),
+  G.IsAcyclic →
+    ∀ (γ : ℕ),
+      (∀ (S : Finset α), GapThreeCriticalConflictCount.IsDominating G.Adj S → γ ≤ S.card) →
+        ∀ (S : Finset α),
+          GapThreeCriticalConflictCount.IsDominating G.Adj S →
+            2 * γ ≤ (GapThreeCriticalConflictCount.critical G.Adj S).card + S.card
+'GapThreeForestConflictCount.forest_critical_inequality' depends on axioms: [propext, Classical.choice, Quot.sound]
+@BipartiteCriticalIndependentAudit.bipartite_critical_le_two_independence : ∀ {α : Type u_1} [Fintype α]
+  [inst : DecidableEq α] (G : SimpleGraph α) [inst_1 : DecidablePred (GapThreeGraphConnectionAudit.IsDominating G.Adj)],
+  G.IsBipartite →
+    ∀ (S : Finset α),
+      GapThreeGraphConnectionAudit.IsDominating G.Adj S →
+        S.card + (GapThreeGraphConnectionAudit.domCritical G.Adj S).card ≤ 2 * G.indepNum
+'BipartiteCriticalIndependentAudit.bipartite_critical_le_two_independence' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@GraphUniformGapAudit.graph_uniform_gap_unimodal : ∀ {α : Type u_1} [inst : Fintype α] [inst_1 : DecidableEq α]
+  (adj : α → α → Prop) [inst_2 : DecidablePred (GapThreeGraphConnectionAudit.IsDominating adj)] (γ h K A : ℕ)
+  (S0 : Finset α),
+  GapThreeGraphConnectionAudit.IsDominating adj S0 →
+    S0.card ≤ γ →
+      h < K →
+        (h + 1) ^ 2 ≤ 4 * K →
+          γ + K ≤ A + 2 →
+            A + 2 ≤ Fintype.card α →
+              (∀ k < A, GapThreeGraphConnectionAudit.dR adj k ≤ GapThreeGraphConnectionAudit.dR adj (k + 1)) →
+                (∀ (j : ℕ),
+                    ∀ U ∈ GapThreeGraphConnectionAudit.domRank adj j,
+                      2 * ↑γ - ↑j ≤ ↑(GapThreeGraphConnectionAudit.domCritical adj U).card ∧
+                        ↑(GapThreeGraphConnectionAudit.domCritical adj U).card ≤ 2 * ↑γ - ↑j + 2 * ↑h) →
+                  ∃ m,
+                    (∀ k < m, GapThreeGraphConnectionAudit.dR adj k ≤ GapThreeGraphConnectionAudit.dR adj (k + 1)) ∧
+                      ∀ k ≥ m, GapThreeGraphConnectionAudit.dR adj (k + 1) ≤ GapThreeGraphConnectionAudit.dR adj k
+'GraphUniformGapAudit.graph_uniform_gap_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@ForestGapThreeAllNoIsolatesAudit.forest_gap_three_unimodal_no_isolates : ∀ {α : Type u_1} [inst : Fintype α]
+  [inst_1 : DecidableEq α] (G : SimpleGraph α)
+  [inst_2 : DecidablePred (GapThreeGraphConnectionAudit.IsDominating G.Adj)],
+  G.IsAcyclic →
+    (∀ (v : α), ∃ u, G.Adj v u) →
+      ∀ (γ : ℕ) (S0 M : Finset α),
+        GapThreeGraphConnectionAudit.IsDominating G.Adj S0 →
+          S0.card ≤ γ →
+            (∀ (S : Finset α), GapThreeGraphConnectionAudit.IsDominating G.Adj S → γ ≤ S.card) →
+              GapThreeGraphConnectionAudit.IsDominating G.Adj M →
+                (∀ x ∈ M, ¬GapThreeGraphConnectionAudit.IsDominating G.Adj (M.erase x)) →
+                  M.card = γ + 3 →
+                    (∀ (N : Finset α),
+                        GapThreeGraphConnectionAudit.IsDominating G.Adj N →
+                          (∀ x ∈ N, ¬GapThreeGraphConnectionAudit.IsDominating G.Adj (N.erase x)) → N.card ≤ γ + 3) →
+                      ∃ m,
+                        (∀ k < m,
+                            GapThreeGraphConnectionAudit.dR G.Adj k ≤ GapThreeGraphConnectionAudit.dR G.Adj (k + 1)) ∧
+                          ∀ k ≥ m,
+                            GapThreeGraphConnectionAudit.dR G.Adj (k + 1) ≤ GapThreeGraphConnectionAudit.dR G.Adj k
+'ForestGapThreeAllNoIsolatesAudit.forest_gap_three_unimodal_no_isolates' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+@GapFourForestLargeAudit.forest_gap_four_large_unimodal : ∀ {α : Type u_1} [inst : Fintype α] [inst_1 : DecidableEq α]
+  (G : SimpleGraph α) [inst_2 : DecidablePred (GapThreeGraphConnectionAudit.IsDominating G.Adj)],
+  G.IsAcyclic →
+    ∀ (γ : ℕ) (S0 : Finset α),
+      GapThreeGraphConnectionAudit.IsDominating G.Adj S0 →
+        S0.card ≤ γ →
+          (∀ (S : Finset α), GapThreeGraphConnectionAudit.IsDominating G.Adj S → γ ≤ S.card) →
+            (∀ (M : Finset α),
+                GapThreeGraphConnectionAudit.IsDominating G.Adj M →
+                  (∀ x ∈ M, ¬GapThreeGraphConnectionAudit.IsDominating G.Adj (M.erase x)) → M.card ≤ γ + 4) →
+              γ + 14 ≤ Fintype.card α →
+                ∃ m,
+                  (∀ k < m, GapThreeGraphConnectionAudit.dR G.Adj k ≤ GapThreeGraphConnectionAudit.dR G.Adj (k + 1)) ∧
+                    ∀ k ≥ m, GapThreeGraphConnectionAudit.dR G.Adj (k + 1) ≤ GapThreeGraphConnectionAudit.dR G.Adj k
+'GapFourForestLargeAudit.forest_gap_four_large_unimodal' depends on axioms: [propext, Classical.choice, Quot.sound]
+@GapFourFiniteReductionAudit.no_isolates_gap_four_large_or_at_most_twenty_two : ∀ {α : Type u_1} [inst : Fintype α]
+  [inst_1 : DecidableEq α] (G : SimpleGraph α) [DecidablePred (GapThreeGraphConnectionAudit.IsDominating G.Adj)],
+  (∀ (v : α), ∃ u, G.Adj v u) →
+    ∀ (γ : ℕ) (M : Finset α),
+      (∀ (S : Finset α), GapThreeGraphConnectionAudit.IsDominating G.Adj S → γ ≤ S.card) →
+        GapThreeGraphConnectionAudit.IsDominating G.Adj M →
+          (∀ x ∈ M, ¬GapThreeGraphConnectionAudit.IsDominating G.Adj (M.erase x)) →
+            M.card = γ + 4 → γ + 14 ≤ Fintype.card α ∨ Fintype.card α ≤ 22
+'GapFourFiniteReductionAudit.no_isolates_gap_four_large_or_at_most_twenty_two' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
